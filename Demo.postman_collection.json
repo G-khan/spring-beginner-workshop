@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "3c4926ab-1773-45f7-8172-033e3b61c505",
+		"name": "Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "111103"
+	},
+	"item": [
+		{
+			"name": "Create Mentee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"John\",\r\n  \"surname\": \"Doe\",\r\n  \"email\": \"john.doe@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/mentees",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mentees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Mentee by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/mentees/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mentees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/mentees?name=John",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mentees"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "John"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update mentee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Updated Name\",\r\n  \"surname\": \"Updated Surname\",\r\n  \"email\": \"updated.email@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/mentees/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mentees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete mentee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/mentees/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mentees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
